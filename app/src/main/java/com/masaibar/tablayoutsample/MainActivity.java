@@ -42,13 +42,14 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
 
                     @Override
                     public int getCount() {
-                        return 4;
+                        return 9;
                     }
                 };
 
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(this);
 
+        tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
         tabLayout.setupWithViewPager(viewPager);
     }
 

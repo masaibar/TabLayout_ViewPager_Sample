@@ -37,9 +37,9 @@ public class ListViewFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_list, container, false);
 
         List<String> strings = new ArrayList<>();
-        strings.add("hoge");
-        strings.add("fuge");
-        strings.add("fuga");
+        for (int i = 0; i < 20; i++) {
+            strings.add("hoge" + i);
+        }
 
         ListView listView = (ListView) view.findViewById(R.id.list);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, strings);
